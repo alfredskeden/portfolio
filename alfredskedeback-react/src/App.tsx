@@ -4,12 +4,10 @@ import AsLink from './components/as-link';
 function App() {
   return (
     <>
-      <header>
-        <div>
-          <a className="ml-10" href="/">React</a>
-          <a className="ml-10" href={import.meta.env.VITE_VUELINK as string}>Vue</a>
-          <a className="ml-10" href={import.meta.env.VITE_ANGULARLINK as string}>Angular</a>
-        </div>
+      <header className="header">
+        <a href="/">React</a>
+        <a href={import.meta.env.VITE_VUELINK as string}>Vue</a>
+        <a href={import.meta.env.VITE_ANGULARLINK as string}>Angular</a>
       </header>
       <main>
         <h1>Hello.</h1>

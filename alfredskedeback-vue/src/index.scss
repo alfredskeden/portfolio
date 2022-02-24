@@ -1,18 +1,22 @@
-:root {
-  --darkcolor: #121314;
-  --white: #fff;
-}
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+// @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-header {
-  a:not(:last-of-type) {
-    margin-right: 0.5rem;
-  }
+
+body {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: calc(10px + 0.33vw);
+  padding: 5vh 10vw;
+  display: block;
+  margin: 8px;
 }
 
 h1 {
   font-size: 4.5em;
   font-weight: 900;
-  margin-bottom: 0;
 }
 
 h2 {
@@ -22,13 +26,10 @@ h2 {
 p, li {
   font-size: 1.6em;
   max-width: 28em;
+  font-weight: 300;
 }
 
-p, h2, li {
-  line-height: 1.4;
-}
-
-a {
+.link-fancy {
   text-decoration: none;
   position: relative;
   color: var(--white);
@@ -46,8 +47,6 @@ a {
   }
 
   @media (prefers-color-scheme: light) {
-    color: var(--darkcolor);
-
     &:after {
       background-color: rgba(143, 218, 45, 0.7);
     }
